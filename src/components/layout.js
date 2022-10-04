@@ -4,9 +4,11 @@ import SideBar from "./sidebar";
 
 export default function Layout() {
   return (
-    <div>
+    <div className="wrapper">
       <SideBar />
-      <Routes />
+      <div className="main_content">
+        <Routes />
+      </div>
     </div>
   );
 }
