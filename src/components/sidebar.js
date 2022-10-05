@@ -22,12 +22,12 @@ export default function SideBar() {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/#">
             <i className="fas fa-address-book"></i>Item Y
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/#">
             <i className="fas fa-map-pin"></i>Item Z
           </a>
         </li>

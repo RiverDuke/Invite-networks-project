@@ -71,3 +71,17 @@ body {
   min-width: 10px;
   display: block;
 }
+
+.orange-btn {
+  background-color: #ff7b00;
+  color: #fff;
+}
+
+.orange-btn:hover {
+  background-color: #ff9633;
+  color: #fff;
+}
+
+.list-group-item p {
+  font-size: 18px;
+}

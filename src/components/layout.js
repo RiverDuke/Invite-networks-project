@@ -6,7 +6,7 @@ export default function Layout() {
   return (
     <div className="wrapper">
       <SideBar />
-      <div className="main_content">
+      <div className="main_content container">
         <Routes />
       </div>
     </div>
