@@ -16,20 +16,17 @@ export default function Interfaces() {
   );
 
   function InterfaceList() {
-    return (
-      matchedDevices &&
-      matchedDevices.map((device) => {
-        return (
-          <li
-            className="list-group-item text-left d-flex justify-content-around"
-            key={device.hardware_id}
-          >
-            <p>Type: {device.type}</p> <p>hardware_Id: {device.hardware_id}</p>
-            <p>Descritpion: {device.description}</p>
-          </li>
-        );
-      })
-    );
+    return matchedDevices.map((device) => {
+      return (
+        <li
+          className="list-group-item text-left d-flex justify-content-around"
+          key={device.hardware_id}
+        >
+          <p>Type: {device.type}</p> <p>hardware_Id: {device.hardware_id}</p>
+          <p>Descritpion: {device.description}</p>
+        </li>
+      );
+    });
   }
 
   return (
