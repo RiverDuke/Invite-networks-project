@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function SideBar() {
   return (
@@ -36,6 +35,5 @@ export default function SideBar() {
         <h4>InviteNetworks</h4>
       </div>
     </div>
-    // </div>
   );
 }

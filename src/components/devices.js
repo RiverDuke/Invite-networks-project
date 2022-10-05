@@ -6,9 +6,7 @@ export default function Devices() {
   const [devices, setDevices] = useState([]);
 
   useEffect(() => {
-    // const ac = new AbortController();
     listDevices().then((res) => setDevices(res));
-    // return () => ac.abort;
   }, []);
 
   function DeviceList() {

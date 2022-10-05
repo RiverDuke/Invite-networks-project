@@ -85,3 +85,7 @@ body {
 .list-group-item p {
   font-size: 18px;
 }
+
+.not-found {
+  font-size: 500px;
+}

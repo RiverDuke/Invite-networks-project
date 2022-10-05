@@ -14,13 +14,6 @@ export default function Interfaces() {
   const matchedDevices = interfaces.filter(
     (device) => device.device === params.deviceId
   );
-  let deviceCount = matchedDevices.length;
-  let emptySpace = [];
-
-  while (deviceCount < 4) {
-    emptySpace.push("&nbsp;");
-    deviceCount++;
-  }
 
   function InterfaceList() {
     return (
@@ -39,29 +32,15 @@ export default function Interfaces() {
     );
   }
 
-  function SpaceFiller() {
-    return (
-      emptySpace &&
-      emptySpace.map((space, index) => {
-        return (
-          <li className="list-group-item" key={index}>
-            &nbsp;
-          </li>
-        );
-      })
-    );
-  }
-
   return (
     <>
       <h1 className="display-4 text-center mt-5 mb-5">Interface List</h1>
       <div className="col-8 mx-auto text-center">
         <ul className="list-group mb-3">
           <InterfaceList />
-          <SpaceFiller />
         </ul>
         <button
-          className="btn btn-lg orange-btn mt-5 "
+          className="btn btn-lg orange-btn mt-5"
           onClick={() => history.goBack()}
         >
           Return

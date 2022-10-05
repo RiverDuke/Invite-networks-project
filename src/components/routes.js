@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router";
 import Devices from "./devices";
 import Interfaces from "./interfaces";
-import UnderContrstruction from "./underconstruction";
+import Notfound from "./notfound";
 
 export default function Routes() {
   return (
@@ -13,7 +13,7 @@ export default function Routes() {
         <Devices />
       </Route>
       <Route>
-        <UnderContrstruction />
+        <Notfound />
       </Route>
     </Switch>
   );
