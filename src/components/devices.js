@@ -10,30 +10,38 @@ export default function Devices() {
   }, []);
 
   function DeviceList() {
-    return (
-      <div className="row justify-content-center">
-        {devices.map((device) => {
-          return (
-            <div
-              className="card col-10 col-md-4 m-3"
-              style={{ width: "18rem" }}
-              key={device._id}
-            >
-              <div className="card-body ">
-                <h5 className="card-title ">Name: {device.name}</h5>
-                <h5 className="card-text ">Id: {device._id}</h5>
-                <Link
-                  to={`/devices/${device._id}/interfaces`}
-                  className="card-link "
-                >
-                  <h5>Interfaces</h5>
-                </Link>
+    if (devices.length > 0) {
+      return (
+        <div className="row justify-content-center">
+          {devices.map((device) => {
+            return (
+              <div
+                className="card col-10 col-md-4 m-3"
+                style={{ width: "18rem" }}
+                key={device._id}
+              >
+                <div className="card-body ">
+                  <h5 className="card-title ">Name: {device.name}</h5>
+                  <h5 className="card-text ">Id: {device._id}</h5>
+                  <Link
+                    to={`/devices/${device._id}/interfaces`}
+                    className="card-link "
+                  >
+                    <h5>Interfaces</h5>
+                  </Link>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    );
+            );
+          })}
+        </div>
+      );
+    } else {
+      return (
+        <div className="alert alert-danger" role="alert">
+          No Devices found, or invalid Authorization
+        </div>
+      );
+    }
   }
 
   return (
